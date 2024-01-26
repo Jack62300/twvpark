@@ -1,0 +1,209 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil de TWV PARK
+{% endblock %}
+
+{% block body %}
+	<div class="heading text-quaternary heading-border heading-bottom-border my-4 pb-2">
+		<h4 class="text-quaternary">
+			<i class="fa-solid fa-shield-halved"></i>
+			Consignes</h4>
+	</div>
+
+	<div class="row my-2 pb-2">
+  {% if consignes is null or consignes is empty %}
+				<div class="alert alert-dark">
+					<strong>Hummm</strong>
+					Il n'y à pas de consigne pour le moment
+				</div>
+			{% else %}
+      {% for consigne in consignes %}
+  <div class="col-lg-4">
+    <article class="post post-large">
+												<div class="post-date">
+													<span class="day text-dark">{{consigne.createdAt|date('d')}}</span>
+													<span class="month text-dark">{{consigne.createdAt|date('M')}}</span>
+												</div>
+
+												<div class="post-content">
+													<h4><a href="blog-post.html" class="text-decoration-none text-dark">{{consigne.title}}</a></h4>
+													<blockquote class="blockquote-dark">
+														<p>{{consigne.content|raw}}</p>
+														{# <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer> #}
+													</blockquote>
+
+													<div class="post-meta">
+														<span class="text-dark"><i class="far fa-user"></i> Par {{consigne.name}}</span>
+														<span><i class="fa-solid fa-list"></i> {% if consigne.status == 'URGENT' %}
+												<span class="badge badge-warning text-dark badge-xs badge-prio"><i class="fa-solid fa-triangle-exclamation"></i> {{consigne.status}}</span>
+											{% elseif consigne.status == 'PRIORITAIRE' %}
+												<span class="badge badge-secondary text-light badge-xs"><i class="fa-solid fa-car-on"></i>  {{consigne.status}}</span>
+											{% elseif consigne.status == 'INFORMATION' %}
+												<span class="badge badge-primary text-dark badge-xs"><i class="fa-solid fa-circle-info"></i> {{consigne.status}}</span>
+											{% elseif consigne.status == 'NEW' %}
+												<span class="badge badge-tertiary text-light badge-xs"><i class="fa-solid fa-rss"></i> NOUVEAU</span>
+											{% endif %}</span>
+													</div>
+
+													<a href="{{path('app_consigne')}}" class="read-more text-color-dark font-weight-bold text-2 btn btn-primary">Voir plus <i class="fas fa-chevron-right text-1 ms-1"></i></a>
+												</div>
+		</article>
+    </div>
+    
+    {% endfor %}
+		{% endif %}
+
+	</div>
+
+
+	<div class="row my-2 pb-2">
+		<div class="col-md-4">
+
+			<div class="card border-radius-1 bg-color-light border-2 box-shadow-1">
+				<div class="card-body py-3 px-2">
+					<div class="heading text-quaternary heading-border heading-bottom-border my-4 pb-2">
+						<h4 class="text-quaternary">
+							<i class="fa-solid fa-key"></i>
+							Prêt de Clef</h4>
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>Numéro/Intitulé</th>
+									<th>Nom du demandeur</th>
+									<th>Nom de l'agent</th>
+									<th>Date</th>
+								</tr>
+							</thead>
+							<tbody>
+              {% if keys is null or keys is empty %}
+               
+                  <div class="alert alert-info">
+                    <strong>CLEF</strong>
+                    Aucune clef prêter pour le moment
+                  </div>
+                {% else %}
+              {% for key in keys %}
+                
+								<tr>
+									<td>{{ key.intituler }}</td>
+									<td>{{ key.name }}</td>
+									<td>JACK</td>
+									<td>{{ key.createdAt|date('d M Y, H:i') }}</td>
+								</tr>
+               
+								{% endfor %}
+                 {% endif %}
+							</tbody>
+						</table>
+						<a href="#" class="btn btn-3d btn-warning mb-2 custombtn">AJOUTER</a>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+		<div class="col-lg-4">
+
+			<div class="card border-radius-1 bg-color-light border-2 box-shadow-1">
+				<div class="card-body py-3 px-2">
+					<div class="heading text-quaternary heading-border heading-bottom-border my-4 pb-2">
+						<h4 class="text-quaternary">
+							<i class="fa-solid fa-gas-pump"></i>
+							Niveau Gas log</h4>
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>Niveau</th>
+									<th>Agent</th>
+									<th>Date</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>55%</td>
+									<td>Benoit</td>
+									<td>21/01/2024 à 11h00</td>
+								</tr>
+								<tr>
+									<td>55%</td>
+									<td>Benoit</td>
+									<td>21/01/2024 à 11h00</td>
+								</tr>
+								<tr>
+									<td>55%</td>
+									<td>Benoit</td>
+									<td>21/01/2024 à 11h00</td>
+								</tr>
+								<tr>
+									<td>55%</td>
+									<td>Benoit</td>
+									<td>21/01/2024 à 11h00</td>
+								</tr>
+								<tr>
+									<td>55%</td>
+									<td>Benoit</td>
+									<td>21/01/2024 à 11h00</td>
+								</tr>
+							</tbody>
+						</table>
+						<a href="#" class="btn btn-3d btn-warning mb-2 custombtn">AJOUTER</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="col-lg-4">
+
+			<div class="card border-radius-1 bg-color-light border-2 box-shadow-1">
+				<div class="card-body py-3 px-2">
+					<div class="heading text-quaternary heading-border heading-bottom-border my-4 pb-2">
+						<h4 class="text-quaternary">
+							<i class="fa-solid fa-shower"></i>
+							Niveau Adoucisseur P2</h4>
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>Sac Restant</th>
+									<th>Agent</th>
+									<th>Date</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>10</td>
+									<td>Benoit</td>
+									<td>21/01/2024 à 11h00</td>
+								</tr>
+								<tr>
+									<td>10</td>
+									<td>Benoit</td>
+									<td>21/01/2024 à 11h00</td>
+								</tr>
+								<tr>
+									<td>10</td>
+									<td>Benoit</td>
+									<td>21/01/2024 à 11h00</td>
+								</tr>
+								<tr>
+									<td>10</td>
+									<td>Benoit</td>
+									<td>21/01/2024 à 11h00</td>
+								</tr>
+								<tr>
+									<td>10</td>
+									<td>Benoit</td>
+									<td>21/01/2024 à 11h00</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<a href="#" class="btn btn-3d btn-warning mb-2 custombtn">AJOUTER</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+{% endblock %}

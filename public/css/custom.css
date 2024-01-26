@@ -1,0 +1,198 @@
+body{
+height: 100vh;
+}
+
+.header-body{
+    background-color:#212529 !important;
+    color:white !important;
+}
+.header-top{
+    background-color:#FBDC17 !important;
+    color:black !important;
+}
+.header-nav-top a {
+    color: black !important;
+}
+.header-nav a {
+    color: white !important;
+}
+.header-nav .dropdown-menu a {
+    color: rgb(0, 0, 0) !important;
+}
+.header-nav-top .ws-nowrap {
+    color: black !important;
+}
+
+#header .header-top {
+    min-height: 20px !important;
+    max-height: 50px !important;
+}
+.btn-warning{
+    background-color:#FBDC17;
+    border-color:#FBDC17 !important;
+}
+.btn-warning:hover{
+    background-color: #212529;
+    border-color: #212529 !important;
+    color:white;
+}
+.btn-primary:hover:not(.bg-transparent), .btn-primary.hover:not(.bg-transparent) {
+
+    background-color: #212529;
+    border-color: #212529 !important;
+    color:white !important;
+}
+.btn-quaternary{
+    background-color: #212529;
+    border-color: #212529 !important;
+    color:white;  
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    background-color: #FBDC17 !important;
+    color:#212529 !important;
+}
+.nav > li > a:active {
+    background-color: #FBDC17 !important;
+    color:#212529 !important;
+}
+.dropdown-item.active, .dropdown-item:active {
+   
+    background-color: #FBDC17 !important;
+    color:#212529 !important;
+}
+
+#header .header-nav-main nav > ul > li.dropdown .dropdown-menu li a:hover, #header .header-nav-main nav > ul > li.dropdown .dropdown-menu li a:focus, #header .header-nav-main nav > ul > li.dropdown .dropdown-menu li a.active, #header .header-nav-main nav > ul > li.dropdown .dropdown-menu li a:active {
+    background-color: #FBDC17 !important;
+    color:#212529 !important;
+}
+
+#header .header-nav-main nav > ul > li.dropdown .dropdown-menu li a:hover, #header .header-nav-main nav > ul > li.dropdown .dropdown-menu li a:focus, #header .header-nav-main nav > ul > li.dropdown .dropdown-menu li a.active, #header .header-nav-main nav > ul > li.dropdown .dropdown-menu li a:active {
+    background-color: #FBDC17 !important;
+    color:#212529 !important;
+}
+#header .header-nav.header-nav-stripe .header-nav-main {
+    margin-top: 0px !important;
+}
+#header .header-nav-main nav > ul > li.dropdown .dropdown-menu {
+    border-color: #FBDC17 !important;
+}
+::selection {
+    background-color: #FBDC17 !important;
+  }
+.nav .nav-pills {
+   background-color: #FBDC17;
+}
+
+:root {
+	--primary: #FBDC17;
+}
+.mb-2 {
+    margin-bottom: 0 !important;
+}
+.btn-quaternary {
+    margin-top: 17px !important;
+    height:50px !important;
+    margin-right: -12px !important;
+}
+.btn-persouser {
+    margin-top: 17px !important;
+    height:50px !important;
+    margin-right: -12px !important;
+}
+.border-2{
+    border-color:#212529;
+}
+.information{
+    margin-top: 20px;
+}
+.heading.heading-bottom-border h4{
+    border-color:#212529;
+}
+.alert-dark{
+    background-color: #212529 !important;
+    border-color: #212529 !important;
+    color:white;  
+}
+.custombtn{
+    width:100%;
+}
+.badge-prio{
+    background-color:red;
+    color:white !important;
+    border-color:red;
+}
+
+/* .badge-warning{
+    background-color:orangered;
+    border-color: orangered;
+    color: white !important;
+} */
+
+.badge-tertiary{
+    background-color:green;
+    color: black;
+    border-color: green;
+}
+
+.btn-primary{
+    border:0 !important;
+}
+
+
+.table>.tab01:not(caption)>*>* {
+    background-color:#212529 !important;
+    color: white !important;
+}
+
+.table>tbody>tr>.bg-red{
+    background-color:red !important;
+    color:white !important;
+    text-align: center;
+    font-size:1.2em;
+    font-weight: bold;
+}
+.table>tbody>tr>.bg-orange{
+    background-color:#e36159; !important;
+    color:white !important;
+    text-align: center;
+    font-size:1.2em;
+    font-weight: bold;
+}
+.table>tbody>tr>.bg-blue{
+    background-color:#FBDC17 !important;
+    color:black !important;
+    text-align: center;
+    font-size:1.2em;
+    font-weight: bold;
+}
+.table>tbody>tr>.bg-green{
+    background-color:green !important;
+    color:white !important;
+    text-align: center;
+    font-size:1.2em;
+    font-weight: bold;
+}
+.blockquote-dark img{
+    max-width:350px;
+}
+.contain-login{
+    padding:50px;
+    margin-top: 5%;
+    background-color:#212529;
+    color:white !important;
+    border:3px solid #FBDC17;
+   
+}
+.contain-login label{
+    color: white !important;
+}
+.contain-login a{
+    color: white !important;
+}
+.contain-login img{
+    max-width: 500px;
+}
+.conntaintest{
+    min-width: 50%;
+}

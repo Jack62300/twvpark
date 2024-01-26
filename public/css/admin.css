@@ -1,0 +1,127 @@
+:root {
+    /* make the backend contents as wide as the browser window */
+    --body-max-width: 100%;
+    /* change the background color of the  */
+    --body-bg: #f5f5f5;
+    /* make the base font size smaller */
+    --font-size-base: 13px;
+    /* remove all border radius to make corners straight */
+    --border-radius: 0px;
+}
+.sidebar{
+    background-color:rgb(29, 27, 27);
+    color: white;
+    padding: 0;
+}
+.menu-header{
+
+    background-color: rgb(29, 27, 27);
+    border: solid 1px rgb(7, 7, 7);
+    color: white;
+}
+.menu-item{
+    background-color: rgb(29, 27, 27);
+    padding:0;
+}
+.menu-item-contents  {
+  background-color: rgb(29, 27, 27);
+  color:white;
+  width: 100%;
+}
+
+
+.card-dashboard{
+	color: black;
+	padding: 5px;
+	border: solid 2px rgb(77, 7, 128);
+	border-radius: 5px;
+	min-height: 200px;
+	color:#14171a;
+	background-color: #3b5998;
+	margin: 5px;
+}
+
+.card-header {
+    background-color: #3b5998;
+    border-bottom: 5px solid black;
+    color: white;
+    margin-bottom: 0;
+    padding: 2px;
+}
+
+
+
+.tiktok{
+	background-color:rgb(29, 27, 27);
+	border: solid 2px #ee1d52;
+	max-width: 100%;
+	width: 200px;
+	max-height: 35px;
+	min-height: 30px;
+	text-align:center;
+	color:#ee1d52;
+}
+
+.twitter{
+	background-color:#1da1f2;
+	border: solid 2px #14171a;
+	max-width: 100%;
+	width: 200px;
+	max-height: 35px;
+	text-align:center;
+	color:#14171a;
+}
+.facebook{
+	background-color:#3b5998;
+	border: solid 2px rgb(7, 76, 146);
+	max-width: 100%;
+	width: 200px;
+	max-height: 35px;
+	text-align:center;
+	color: rgb(255,255,255);
+}
+.instagram{
+	background-color:#fcaf45;
+	border: solid 2px #833ab4;
+	max-width: 100%;
+	width: 200px;
+	max-height: 35px;
+	text-align:center;
+	color: #833ab4;
+}
+.discord{
+	background-color:#5465bc;
+	border: solid 2px #ffffff;
+	max-width: 100%;
+	width: 200px;
+	max-height: 35px;
+	text-align:center;
+	color: #2f3969;
+}
+.youtube{
+	background-color:#ff0000;
+	border: solid 2px #ffffff;
+	max-width: 100%;
+	width: 200px;
+	max-height: 35px;
+	text-align:center;
+	color: #ffffff;
+}
+.title-dash{
+	background-color:#cfcfcf;
+	color: rgb(0, 0, 0);
+	border: solid 2px #5a0404;
+	padding:5px;
+	text-align: center;
+	margin-bottom: 0;
+	margin:0;
+	width: 100%;
+	min-width: 100%;
+}
+
+
+#main-menu .menu .menu-item {
+	padding-left: 0 !important;
+	padding-right: 5px !important;
+	border-radius:5px;
+  }
