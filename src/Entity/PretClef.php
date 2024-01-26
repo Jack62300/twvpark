@@ -2,8 +2,10 @@
 
 namespace App\Entity;
 
-use App\Repository\PretClefRepository;
+
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\PretClefRepository;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: PretClefRepository::class)]
 class PretClef
@@ -14,16 +16,22 @@ class PretClef
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank]
     private ?string $intituler = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank]
     private ?string $name = null;
 
     #[ORM\Column]
+    #[Assert\NotBlank]
     private ?\DateTimeImmutable $createdAt = null;
 
     #[ORM\Column(nullable: true)]
     private ?bool $status = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $agent = null;
 
     public function getId(): ?int
     {
@@ -74,6 +82,18 @@ class PretClef
     public function setStatus(?bool $status): static
     {
         $this->status = $status;
+
+        return $this;
+    }
+
+    public function getAgent(): ?string
+    {
+        return $this->agent;
+    }
+
+    public function setAgent(string $agent): static
+    {
+        $this->agent = $agent;
 
         return $this;
     }

@@ -196,3 +196,14 @@ height: 100vh;
 .conntaintest{
     min-width: 50%;
 }
+.bg-perso{
+    background-color:#212529 !important;
+}
+.bodyerror{
+    background-image: url('../img/bg01.jpg');
+    background-size: cover;
+}
+.btn > .btn-perso{
+    min-width: 100% !important;
+    
+}
